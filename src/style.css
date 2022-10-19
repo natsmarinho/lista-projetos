@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root{
+    font-size: 62.5%;
+    --color-text: #02d08f;
+}
+
+body{
+    font-family: 'VT323', monospace;
+    background-color: #0c021b;
+    height: 100vh;
+}
+
+body.active{
+    background-color: beige;
+}
+
+header{
+position: absolute;
+left: 3rem;
+top: 2rem;
+}
+
+header h1{
+    font-size: 5rem;
+    color: var(--color-text);
+
+}
+
+.container{
+    width: 10rem;
+    height: 4rem;
+    border: 5px solid var(--color-text);
+    border-radius: 60px;
+    position: absolute;
+    cursor: pointer;
+    transition: background .5s;
+    left: 21rem;
+    top: 1rem
+}
+
+.btn-mode::before{
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-text);
+    border-radius: 50%;
+    top: 50%;
+    left: .5rem;
+    transform: translateY(-50%);
+    transition: left .5s;
+}
+
+.btn-mode.active::before{
+    left: 6.5rem;
+}
+
+
+img{
+    width: 2rem;
+    padding-top: .6rem;
+}
+
+.modo-dia{
+    margin-left: 4rem;
+}
+
+.modo-noite{
+    margin-left: .3rem;
+}
+
+
+header ul{
+    position: relative;
+    display: flex;
+    gap: 4rem;
+    cursor: pointer;
+    padding-top: 3rem;
+}
+
+header ul li{
+    position: relative;
+}
+
+header ul li a .icon{
+    font-size: 4rem;
+    color: var(--color-text);
+}
+
+header ul li a:hover{
+    border-bottom: 4px solid var(--color-text);
+    transition: .7ms ease-in-out;
+}
+
+.lista-projetos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projeto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid var(--color-text);
+    width: 31rem;
+    height: 25rem;
+    margin-block: 4rem;
+}
+
+.height{
+    margin-top: 28rem;
+}
+
+.height-text a{
+    padding-top: 1.5rem;
+}
+
+
+.projeto a{
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    color: var(--color-text)
+}
+
+.print-projeto{
+    width: 30rem;
+    border-bottom: 2px solid var(--color-text);
+}
+
+@media screen and (min-width: 700px){
+
+    .container{
+        left: 58rem;
+    }
+
+    header h1{
+        font-size: 8rem;
+    }
+
+    header ul{
+        gap: 7rem;
+    }
+    header ul li a .icon{
+        font-size: 7rem;
+        color: var(--color-text);
+    }
+
+    .lista-projetos{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .projeto{
+        display: inline-block;
+        margin-left: 5rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .container{
+        left: 105rem;
+    }
+
+    .projeto{
+        margin-left: 8rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .container{
+        left: 120rem;
+    }
+
+    .projeto{
+        margin-left: 10rem;
+    }
+}
